@@ -92,11 +92,11 @@ Configure:
 
 | Setting | Value |
 |---------|-------|
-| Bucket Name | `my-static-website-bucket-12345` |
+| Bucket Name | `your-unique-bucket-name` |
 | Region | Same region as EC2 |
 | Object Ownership | ACLs Disabled |
 | Block Public Access | Enabled (All four boxes checked) |
-| Versioning | Optional |
+| Versioning | Optional (Disabled for this tutorial as it is not needed) |
 | Encryption | SSE-S3 |
 
 Click **Create Bucket**.
@@ -165,7 +165,7 @@ rm -rf /var/www/html/*
 
 echo "Downloading website from S3..."
 
-aws s3 cp s3://my-static-website-bucket-12345/website/ /var/www/html/ --recursive
+aws s3 cp s3://your-unique-bucket-name/website/ /var/www/html/ --recursive
 
 systemctl enable nginx
 
@@ -177,7 +177,7 @@ echo "Deployment Complete"
 Replace:
 
 ```text
-my-static-website-bucket-12345
+your-unique-bucket-name
 ```
 
 with your own bucket name.
@@ -271,7 +271,7 @@ Copy the second image from S3.
 
 ```bash
 sudo aws s3 cp \
-s3://my-static-website-bucket-12345/website/image2.jpg \
+s3://your-unique-bucket-name/website/image2.jpg \
 /var/www/html/image1.jpg
 ```
 
@@ -289,7 +289,7 @@ Restore the original image.
 
 ```bash
 sudo aws s3 cp \
-s3://my-static-website-bucket-12345/website/image1.jpg \
+s3://your-unique-bucket-name/website/image1.jpg \
 /var/www/html/image1.jpg
 ```
 
@@ -358,7 +358,7 @@ image2.jpg
 List the bucket.
 
 ```bash
-aws s3 ls s3://my-static-website-bucket-12345/website/
+aws s3 ls s3://your-unique-bucket-name/website/
 ```
 
 ---
