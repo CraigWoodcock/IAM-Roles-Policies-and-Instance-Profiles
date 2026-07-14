@@ -139,6 +139,30 @@ Configure the following:
 | Role name | `EC2-S3-Role` |
 | Description | Allows EC2 instances to read Objects from S3 buckets |
 
+
+You will notice a **TRUST POLICY** in json format, this essentially specifies that EC2 instances are allowed to assume the role, the policy looks like this:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sts:AssumeRole"
+            ],
+            "Principal": {
+                "Service": [
+                    "ec2.amazonaws.com"
+                ]
+            }
+        }
+    ]
+}
+
+
+```
+
 Click **Create role**.
 
 ---
