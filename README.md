@@ -18,8 +18,8 @@ AWS Policies define permissions that are attached to the role. All new roles hav
 
 ## How To Create a Policy, Role and attach the Instance Profile.
 
-- [Creating an IAM Role and Policy](<Creating IAM Policies and Roles\README.md>)
+- [Creating an IAM Role and Policy](<Creating IAM Policies and Roles>)
 
 ## Iam - S3 - Nginx website Demonstrating S3 Access via Instance Profile.
 
-- [IAM-S3-Nginx-Demo](<IAM-S3-Nginx-Demo\README.md>)
+- [IAM-S3-Nginx-Demo](<IAM-S3-Nginx-Demo>)
