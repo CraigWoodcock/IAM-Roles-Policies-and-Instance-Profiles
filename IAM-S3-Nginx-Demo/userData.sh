@@ -21,8 +21,8 @@ echo "Downloading website from S3..."
 
 sudo aws s3 cp s3://craig-iam-s3-nginx-bucket/website/ /var/www/html/ --recursive
 
-systemctl enable nginx
+sudo systemctl enable nginx
 
-systemctl restart nginx
+sudo systemctl restart nginx
 
 echo "Deployment Complete"
