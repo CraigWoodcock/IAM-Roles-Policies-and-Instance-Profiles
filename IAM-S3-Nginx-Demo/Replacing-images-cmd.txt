@@ -1,0 +1,11 @@
+#Replacing the image:
+
+sudo aws s3 cp \
+s3://craig-iam-s3-nginx-bucket/website/image2.jpg \
+/var/www/html/image1.jpg
+
+#Restoring the original image:
+
+sudo aws s3 cp \
+s3://craig-iam-s3-nginx-bucket/website/image1.jpg \
+/var/www/html/image1.jpg
